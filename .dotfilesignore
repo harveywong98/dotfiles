@@ -1,0 +1,110 @@
+# ==========================
+# SSH / GPG / Certificates
+# ==========================
+.ssh/
+.gnupg/
+.cert/
+*.pem
+*.key
+*.crt
+
+# ==========================
+# Shell history
+# ==========================
+.*_history
+.*_logout
+
+# ==========================
+# Environment & secrets
+# ==========================
+.env
+.env.*
+*.env
+*_secret*
+*_token*
+*credential*
+.aws/
+.docker/
+.kube/
+.sys1og.conf
+
+# ==========================
+# Keyrings & password stores
+# ==========================
+.local/share/keyrings/
+.config/kwalletrc
+.config/kdeglobals
+.config/*keyring*
+.config/*Keyring*
+
+# ==========================
+# Proxy / VPN / Clash
+# ==========================
+*/clash*
+*/Clash*
+*/Clash\ Verge*
+*/Clash\ Verge\ Rev*
+*/proxy*
+*/v2ray*
+*/xray*
+*/sing-box*
+
+# ==========================
+# Browser & app data (may contain tokens)
+# ==========================
+.mozilla/
+.config/google-chrome/
+.config/chromium/
+.config/Code/
+.config/*Code*/
+Trust\ Tokens*
+
+# ==========================
+# Cache & temp
+# ==========================
+.cache/
+*.log
+*.tmp
+*.swp
+*.bak
+*~
+.DS_Store
+.config/dconf/
+.config/pulse/
+.config/ibus/
+
+# ==========================
+# Package managers & runtimes
+# ==========================
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.fnm/
+.npm/
+.yarn/
+.pnpm/
+
+# ==========================
+# Systemd auto-generated
+# ==========================
+.config/systemd/user/default.target.wants/
+.config/systemd/user/sockets.target.wants/
+.config/systemd/user/pipewire.service.wants/
+.config/systemd/user/pipewire-session-manager.service
+
+# ==========================
+# Misc auto-generated
+# ==========================
+.config/user-dirs.dirs
+.config/user-dirs.locale
+.config/mimeapps.list
+.config/autostart/
+.config/Thunar/
+.config/xfce4/
+.config/arkrc
+.config/gtk-3.0/
+.lesshst
+.local/share/
+.local/state/
