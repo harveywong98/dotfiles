@@ -8,12 +8,18 @@ if [ -z "$url" ]; then
     url="about:blank"
 fi
 
+FIREFOX_ICON="/usr/share/icons/hicolor/32x32/apps/firefox.png"
+CHROME_ICON="/usr/share/icons/hicolor/32x32/apps/google-chrome.png"
+
 choice=$(zenity --list \
+    --imagelist \
     --title="选择浏览器" \
     --text="用哪个浏览器打开？" \
-    --column="Browser" \
-    "Firefox" \
-    "Chrome" \
+    --hide-header \
+    --print-column=2 \
+    --column="Icon" --column="Browser" \
+    "$FIREFOX_ICON" "Firefox" \
+    "$CHROME_ICON" "Chrome" \
     --width=300 --height=250 \
     2>/dev/null)
 
