@@ -1,0 +1,24 @@
+#!/bin/bash
+# Browser chooser — pops a dialog to pick which browser opens the URL
+
+url="${1:-}"
+
+# If no URL given, just pick a browser and open it (for default browser probing)
+if [ -z "$url" ]; then
+    url="about:blank"
+fi
+
+choice=$(zenity --list \
+    --title="选择浏览器" \
+    --text="用哪个浏览器打开？" \
+    --column="Browser" \
+    "Firefox" \
+    "Chrome" \
+    --width=300 --height=250 \
+    2>/dev/null)
+
+case "$choice" in
+    Firefox) exec firefox "$url" ;;
+    Chrome)  exec google-chrome-stable "$url" ;;
+    "")      exec firefox "$url" ;;  # user cancelled dialog
+esac

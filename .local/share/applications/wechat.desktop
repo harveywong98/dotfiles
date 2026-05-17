@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=WeChat
+Comment=WeChat
+Exec=env _portableConfig=com.qq.weixin PORTABLE_CONF=com.qq.weixin /usr/bin/portable -- %u
+Icon=wechat
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;Chat;
+Keywords=wechat;weixin;we;w;
+StartupWMClass=wechat
+StartupNotify=false
+X-GNOME-SingleWindow=true
+SingleMainWindow=true
+NoDisplay=true

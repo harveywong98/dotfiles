@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Browser Chooser
+Comment=Choose which browser to open links with
+Exec=/home/harvey/.local/bin/browser-chooser %u
+Icon=web-browser
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+NoDisplay=true
+MimeType=x-scheme-handler/unknown;x-scheme-handler/about;text/html;x-scheme-handler/http;x-scheme-handler/https;

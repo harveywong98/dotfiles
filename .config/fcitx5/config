@@ -1,6 +1,8 @@
 [Hotkey]
 # 按住切换键的修饰键时进行轮换切换
 EnumerateWithTriggerKeys=True
+# 取消激活输入法
+DeactivateKeys=
 # 向前切换输入法
 EnumerateForwardKeys=
 # 向后切换输入法
@@ -13,13 +15,9 @@ ModifierOnlyKeyTimeout=250
 [Hotkey/TriggerKeys]
 0=Control+space
 1=Zenkaku_Hankaku
-2=Hangul
 
 [Hotkey/ActivateKeys]
 0=Hangul_Hanja
-
-[Hotkey/DeactivateKeys]
-0=Hangul_Romaja
 
 [Hotkey/AltTriggerKeys]
 0=Shift_L
