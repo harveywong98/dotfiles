@@ -7,8 +7,8 @@
         }
     ],
     "states": {
-        "mini-docker": {
-            "enabled": false,
+        "ssh-sessions": {
+            "enabled": true,
             "sourceUrl": "https://github.com/noctalia-dev/noctalia-plugins"
         }
     },

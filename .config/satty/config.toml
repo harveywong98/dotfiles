@@ -1,0 +1,31 @@
+[general]
+copy-command = "wl-copy"
+default-hide-toolbars = false
+no-window-decoration = true
+initial-tool = "arrow"
+actions-on-enter = ["save-to-clipboard", "exit"]
+actions-on-escape = ["exit"]
+early-exit = true
+zoom-factor = 1.0
+input-scale = 1.0
+floating-hack = true
+
+[color-palette]
+palette = [
+    "#ff0000",
+    "#00ffff",
+    "#a52a2a",
+    "#dc143c",
+    "#ff1493",
+    "#ffd700",
+    "#008000",
+]
+custom = [
+    "#ff0000",
+    "#00ffff",
+    "#a52a2a",
+    "#dc143c",
+    "#ff1493",
+    "#ffd700",
+    "#008000",
+]

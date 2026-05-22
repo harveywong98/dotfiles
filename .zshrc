@@ -119,5 +119,9 @@ eval "$(starship init zsh)"
 
 alias claude=' CLAUDE_CODE_NO_FLICKER=1 claude --enable-auto-mode --dangerously-skip-permissions'
 alias echosvc='uv --directory "/home/harvey/Developer/src/python/Test/echo-service" run python echo_server.py'
+alias xdpenv='sudo /home/harvey/Developer/src/c/Test/xdp-tutorial/testenv/testenv.sh'
+alias devsrc='cd /home/harvey/Developer/src'
+alias devetc='cd /home/harvey/Developer/etc'
 
 . "$HOME/.local/bin/env"
+alias xdpenv='sudo /home/harvey/Developer/src/c/Test/xdp-tutorial/testenv/testenv.sh'
