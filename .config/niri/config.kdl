@@ -104,15 +104,23 @@ output "eDP-1" {
     // so to put another output directly adjacent to it on the right, set its x to 1920.
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
-    position x=0 y=43
+    position x=0 y=0
 }
+
+// output "DP-1" {
+//     mode "3840x2160@59.997"
+//     scale 2
+//     transform "normal"
+//     position x=-107 y=-1080
+// }
 
 output "DP-2" {
     mode "2560x1440@75.033"
     scale 1.25
     transform "normal"
-    position x=1756 y=0
+    position x=1707 y=-43
 }
+
 
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
@@ -278,6 +286,9 @@ layout {
 
 environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_STYLE_OVERRIDE "kvantum"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORM "wayland"
 }
 
 // Add lines like this to spawn processes at startup.
@@ -389,6 +400,13 @@ window-rule {
     default-column-width {}
 }
 
+// AI 2026-06-02: Hyprland portal share picker — float and don't tile
+window-rule {
+    match app-id=r#"^hyprland-share-picker$"#
+    open-floating true
+    default-column-width {}
+}
+
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
@@ -434,10 +452,11 @@ binds {
     // The allow-when-locked=true property makes them work even when the session is locked.
     // Using spawn-sh allows to pass multiple arguments together with the command.
     // "-l 1.0" limits the volume to 100%.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    XF86TouchpadToggle   allow-when-locked=true { spawn-sh "~/.config/niri/bin/toggle-touchpad"; }
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.

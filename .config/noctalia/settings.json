@@ -22,7 +22,6 @@
             "firefox",
             "localsend",
             "com.mitchellh.ghostty",
-            "CC Switch",
             "fcitx5-configtool",
             "yesplaymusic",
             "SPlayer",
@@ -35,9 +34,10 @@
             "wemeetapp",
             "code",
             "thunar",
-            "com.qq.weixin",
             "org.keepassxc.KeePassXC",
-            "google-chrome"
+            "google-chrome",
+            "com.qq.weixin",
+            "CC Switch"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -65,7 +65,7 @@
         "backgroundOpacity": 0.93,
         "barType": "simple",
         "capsuleColorKey": "none",
-        "capsuleOpacity": 1,
+        "capsuleOpacity": 0.65,
         "contentPadding": 2,
         "density": "default",
         "displayMode": "always_visible",
@@ -73,7 +73,7 @@
         "fontScale": 1,
         "frameRadius": 12,
         "frameThickness": 8,
-        "hideOnOverview": false,
+        "hideOnOverview": true,
         "marginHorizontal": 4,
         "marginVertical": 4,
         "middleClickAction": "none",
@@ -83,7 +83,7 @@
         ],
         "mouseWheelAction": "none",
         "mouseWheelWrap": true,
-        "outerCorners": true,
+        "outerCorners": false,
         "position": "top",
         "reverseScroll": false,
         "rightClickAction": "controlCenter",
@@ -106,7 +106,7 @@
                     "focusedColor": "primary",
                     "followFocusedScreen": false,
                     "fontWeight": "regular",
-                    "groupedBorderOpacity": 0.5,
+                    "groupedBorderOpacity": 0,
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
@@ -134,7 +134,7 @@
                 {
                     "clockColor": "none",
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
+                    "formatHorizontal": "HH:mm, MM/dd",
                     "formatVertical": "HH mm - dd MM",
                     "id": "Clock",
                     "tooltipFormat": "h:mm AP",
@@ -208,7 +208,8 @@
                         "tnrFGcKgaJ",
                         "TPcuBCRqI2",
                         "49S3jVibMs",
-                        "W_HZ4JA-X2"
+                        "W_HZ4JA-X2",
+                        "4p2ObhOcQI"
                     ]
                 },
                 {
@@ -222,7 +223,7 @@
                 },
                 {
                     "deviceNativePath": "__default__",
-                    "displayMode": "graphic",
+                    "displayMode": "graphic-clean",
                     "hideIfIdle": false,
                     "hideIfNotDetected": true,
                     "id": "Battery",
@@ -300,15 +301,15 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": true,
-        "generationMethod": "muted",
+        "darkMode": false,
+        "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
         "predefinedScheme": "Kanagawa",
         "schedulingMode": "off",
-        "syncGsettings": false,
-        "useWallpaperColors": false
+        "syncGsettings": true,
+        "useWallpaperColors": true
     },
     "controlCenter": {
         "cards": [
@@ -386,7 +387,7 @@
         "colorizeIcons": false,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
-        "dockType": "floating",
+        "dockType": "attached",
         "enabled": false,
         "floatingRatio": 1,
         "groupApps": false,
@@ -405,10 +406,11 @@
         ],
         "onlySameOutput": true,
         "pinnedApps": [
+            "google-chrome"
         ],
         "pinnedStatic": false,
         "position": "bottom",
-        "showDockIndicator": false,
+        "showDockIndicator": true,
         "showLauncherIcon": false,
         "sitOnFrame": false,
         "size": 1
@@ -417,14 +419,14 @@
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": true,
         "animationDisabled": false,
-        "animationSpeed": 1,
+        "animationSpeed": 2,
         "autoStartAuth": true,
         "avatarImage": "/home/harvey/.face",
         "boxRadiusRatio": 1,
         "clockFormat": "",
         "clockStyle": "digital",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.2,
+        "dimmerOpacity": 0,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": true,
         "enableLockScreenMediaControls": true,
@@ -480,8 +482,8 @@
     },
     "hooks": {
         "colorGeneration": "",
-        "darkModeChange": "",
-        "enabled": false,
+        "darkModeChange": "/home/harvey/.local/bin/theme-switch.sh $1",
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
@@ -523,7 +525,7 @@
     "network": {
         "bluetoothAutoConnect": false,
         "bluetoothDetailsViewMode": "grid",
-        "bluetoothHideUnnamedDevices": false,
+        "bluetoothHideUnnamedDevices": true,
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
@@ -687,6 +689,14 @@
     },
     "templates": {
         "activeTemplates": [
+            {
+                "enabled": true,
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "gtk"
+            }
         ],
         "enableUserTheming": false
     },
@@ -696,10 +706,10 @@
         "fontDefaultScale": 1,
         "fontFixed": "Sarasa Mono SC",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.93,
+        "panelBackgroundOpacity": 0.75,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
-        "settingsPanelMode": "attached",
+        "settingsPanelMode": "centered",
         "settingsPanelSideBarCardStyle": false,
         "tooltipsEnabled": true,
         "translucentWidgets": true
@@ -714,7 +724,7 @@
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": false,
-        "linkLightAndDarkWallpapers": true,
+        "linkLightAndDarkWallpapers": false,
         "monitorDirectories": [
         ],
         "overviewBlur": 0.4,
@@ -737,10 +747,10 @@
             "pixelate",
             "honeycomb"
         ],
-        "useOriginalImages": true,
+        "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "single",
+        "viewMode": "recursive",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
